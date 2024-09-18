@@ -2,26 +2,171 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.background-home {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8533614129245448) 0%,
+      rgba(0, 0, 0, 0.648879620207458) 38%,
+      rgba(0, 0, 0, 0.6068628134847689) 77%,
+      rgba(98, 57, 0, 0.7497199563419117) 99%
+    ),
+    url("../public/backgrounds/firelink.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.down-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6533614129245448) 0%,
+      rgba(0, 0, 0, 0.448879620207458) 38%,
+      rgba(0, 0, 0, 0.4068628134847689) 77%,
+      rgba(98, 0, 0, 0.75) 99%
+    ),
+    url("../public/backgrounds/down-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.up-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6533614129245448) 0%,
+      rgba(0, 0, 0, 0.448879620207458) 38%,
+      rgba(0, 0, 0, 0.4068628134847689) 77%,
+      rgba(63, 1, 1, 0.75) 99%
+    ),
+    url("../public/backgrounds/up-bg.png");
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+.correct-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6533614129245448) 0%,
+      rgba(0, 0, 0, 0.448879620207458) 38%,
+      rgba(0, 0, 0, 0.4068628134847689) 77%,
+      rgba(31, 98, 0, 0.75) 99%
+    ),
+    url("../public/backgrounds/correct-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.semicorrect-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6533614129245448) 0%,
+      rgba(0, 0, 0, 0.448879620207458) 38%,
+      rgba(0, 0, 0, 0.4068628134847689) 77%,
+      rgba(139, 82, 1, 0.75) 99%
+    ),
+    url("../public/backgrounds/semi-correct-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.incorrect-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6533614129245448) 0%,
+      rgba(0, 0, 0, 0.448879620207458) 38%,
+      rgba(0, 0, 0, 0.4068628134847689) 77%,
+      rgba(90, 0, 0, 0.747) 99%
+    ),
+    url("../public/backgrounds/incorrect-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.title-grid {
+  @apply text-white font-optimus border-b-2 mx-3 text-lg w-24 text-center;
+}
+.row-item {
+  @apply size-24 m-3 flex justify-center items-center text-white rounded-md text-center font-semibold font-optimus text-2xl;
+}
+
+.go-up {
+  animation: goUp 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+@keyframes goUp {
+  0% {
+    transform: translateY(-130px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.shaking:hover {
+  animation: shake 0.32s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+  cursor: pointer;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes shake {
+  30%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
   }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+.animation-delay-50 {
+  animation-delay: 50ms;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-300 {
+  animation-delay: 400ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+.animation-delay-800 {
+  animation-delay: 800ms;
+}
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+.animation-delay-1100 {
+  animation-delay: 1100ms;
 }
