@@ -49,7 +49,7 @@ export default function Navbar() {
           </div>
           <div
             className={
-              "overflow-hidden transition-all " + (menuDS1 ? "h-16" : " h-0")
+              "overflow-hidden transition-all " + (menuDS1 ? "h-10" : " h-0")
             }
           >
             <Link
@@ -58,10 +58,9 @@ export default function Navbar() {
             >
               Weapons
             </Link>
-            <div className="text-white font-optimus text-xl">Bosses</div>
           </div>
           <div
-            className="text-white text-4xl font-optimus my-2"
+            className="text-white text-4xl font-optimus my-2 hover:cursor-pointer "
             onClick={() => setmenuDS3(!menuDS3)}
           >
             {" "}
@@ -69,25 +68,30 @@ export default function Navbar() {
           </div>
           <div
             className={
-              "overflow-hidden transition-all " + (menuDS3 ? "h-16" : " h-0")
+              "overflow-hidden transition-all " + (menuDS3 ? "h-10" : " h-0")
             }
           >
-            <div className="text-white font-optimus text-xl">Weapons</div>
-            <div className="text-white font-optimus text-xl">Bosses</div>
+            <Link
+              href="/darksouls3/weapons"
+              className="text-white font-optimus text-xl"
+            >
+              Weapons
+            </Link>
           </div>
           <div
-            className="text-white text-4xl font-optimus my-2"
+            className="text-white text-4xl font-optimus my-2 hover:cursor-pointer "
             onClick={() => setmenuMixed(!menuMixed)}
           >
             MIXED
           </div>
           <div
             className={
-              "overflow-hidden transition-all " + (menuMixed ? "h-16" : " h-0")
+              "overflow-hidden transition-all " + (menuMixed ? "h-10" : " h-0")
             }
           >
-            <div className="text-white font-optimus text-xl">Weapons</div>
-            <div className="text-white font-optimus text-xl">Bosses</div>
+            <div className="text-white font-optimus text-xl hover:cursor-help">
+              Weapons
+            </div>
           </div>
         </div>
       </div>

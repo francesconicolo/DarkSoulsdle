@@ -1,19 +1,19 @@
 import React from "react";
 import MainPage from "../../components/ds1/mainPageWeapons";
-import data from "../../../public/data/data.json";
+import data from "../../../public/data/dataWeaponDS1.json";
 export const runtime = "edge";
 export default async function ds1Weapons() {
   const res = await fetch(
-    `https://draftez.onrender.com/dailyWeaponDS1?cacheBuster=${Date.now()}`
+    `https://draftez.onrender.com/dailyNumbers?cacheBuster=${Date.now()}`
   );
   const randomNumber = await res.json();
 
   return (
-    <div>
+    <div className="background-home-ds1">
       <MainPage
         data={data}
-        newWeapon={randomNumber.message.oggi}
-        prevWeapon={randomNumber.message.ieri}
+        newWeapon={randomNumber.message.ds1.weapon.oggi}
+        prevWeapon={randomNumber.message.ds1.weapon.ieri}
       ></MainPage>
     </div>
   );

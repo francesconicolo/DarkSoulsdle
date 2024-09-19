@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${optimus.variable} antialiased background-home`}>
+      <body className={`${optimus.variable} antialiased `}>
         <Navbar></Navbar>
         {children}
       </body>
