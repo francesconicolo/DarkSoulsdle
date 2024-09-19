@@ -89,11 +89,11 @@ export default function clientPart({
 
     return weapons;
   };
-
   const [allWeapons, setAllWeapons] = useState<Weapon[]>(mapWeapons(data));
   const [correctAnswer, setCorrectAnswer] = useState<Weapon>(
     allWeapons[newWeapon]
   );
+  console.log(allWeapons[25]);
   const [oldAnswer, setOldAnswer] = useState<Weapon>(allWeapons[prevWeapon]);
 
   const handleSelectWeapon = (weapon: Weapon) => {
@@ -139,9 +139,9 @@ export default function clientPart({
     return "default-bg";
   }
   function correctBGWeight(item: Weapon) {
-    if (correctAnswer.weight > item.weight) {
+    if (Number(correctAnswer.weight) > Number(item.weight)) {
       return "up-bg";
-    } else if (correctAnswer.weight < item.weight) {
+    } else if (Number(correctAnswer.weight) < Number(item.weight)) {
       return "down-bg";
     } else if (correctAnswer.weight == item.weight) {
       return "correct-bg";

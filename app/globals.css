@@ -40,7 +40,7 @@
     ),
     url("../public/backgrounds/up-bg.png");
   background-size: cover;
-
+  background-position: center;
   background-repeat: no-repeat;
 }
 .correct-bg {

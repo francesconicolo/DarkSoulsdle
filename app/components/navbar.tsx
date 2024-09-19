@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 export default function Navbar() {
   const [Open, setOpen] = useState(false);
   const [menuDS1, setmenuDS1] = useState(false);
@@ -41,7 +42,7 @@ export default function Navbar() {
           }
         >
           <div
-            className="text-white text-4xl font-optimus my-2 "
+            className="text-white text-4xl font-optimus my-2 hover:cursor-pointer "
             onClick={() => setmenuDS1(!menuDS1)}
           >
             Dark Souls 1
@@ -51,7 +52,12 @@ export default function Navbar() {
               "overflow-hidden transition-all " + (menuDS1 ? "h-16" : " h-0")
             }
           >
-            <div className="text-white font-optimus text-xl">Weapons</div>
+            <Link
+              href="/darksouls/weapons"
+              className="text-white font-optimus text-xl"
+            >
+              Weapons
+            </Link>
             <div className="text-white font-optimus text-xl">Bosses</div>
           </div>
           <div
