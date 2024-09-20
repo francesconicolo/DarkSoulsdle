@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
-export default function rightAnswer({ item }: { item: any }) {
+export default function rightAnswer({
+  item,
+  gioco,
+}: {
+  item: any;
+  gioco: string;
+}) {
   return (
     <div
       className={
@@ -13,7 +19,7 @@ export default function rightAnswer({ item }: { item: any }) {
           La risposta di oggi e':
         </p>
         <img
-          src={"/weaponsDS1/" + item.id + ".png"}
+          src={"/weapons" + gioco + "/" + item.id + ".png"}
           className="size-20 my-6"
           alt=""
         />

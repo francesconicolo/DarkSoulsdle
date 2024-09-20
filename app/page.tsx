@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+export const runtime = "edge";
 
 export default function Home() {
   return (

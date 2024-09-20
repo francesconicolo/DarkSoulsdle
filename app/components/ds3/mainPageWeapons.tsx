@@ -243,7 +243,7 @@ export default function clientPart({
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       {modal ? (
         <div onClick={() => setModal(false)}>
-          <RightAnswer item={correctAnswer}></RightAnswer>
+          <RightAnswer item={correctAnswer} gioco={"DS3"}></RightAnswer>
         </div>
       ) : (
         <></>
