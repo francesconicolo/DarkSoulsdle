@@ -2,18 +2,21 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [Open, setOpen] = useState(false);
   const [menuDS1, setmenuDS1] = useState(false);
   const [menuDS3, setmenuDS3] = useState(false);
   const [menuMixed, setmenuMixed] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div>
       <div
         className={
           "flex justify-start items-end p-3 z-50 absolute transition-all " +
-          (Open ? "left-[260px]" : " left-1")
+          (Open ? "left-[260px]" : " left-1") +
+          (pathname == "/" ? " hidden" : "")
         }
       >
         <img
