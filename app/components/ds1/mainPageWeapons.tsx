@@ -93,7 +93,7 @@ export default function clientPart({
   const [correctAnswer, setCorrectAnswer] = useState<Weapon>(
     allWeapons[newWeapon]
   );
-  console.log(allWeapons[25]);
+
   const [oldAnswer, setOldAnswer] = useState<Weapon>(allWeapons[prevWeapon]);
 
   const handleSelectWeapon = (weapon: Weapon) => {
@@ -283,7 +283,7 @@ export default function clientPart({
             />
             <div
               className={
-                " bg-white rounded-md w-[330px] flex flex-col my-2 overflow-y-scroll max-h-44 absolute top-[40px] z-20 " +
+                " bg-white rounded-md w-[330px] flex flex-col my-2 overflow-y-scroll max-h-72 absolute top-[40px] z-20 " +
                 (filter.length > 0 ? "visible" : "invisible")
               }
             >
@@ -296,7 +296,7 @@ export default function clientPart({
                   >
                     <img
                       src={"/weaponsDS1/" + item.id + ".png"}
-                      className="pl-2 "
+                      className="pl-2 object-contain object-left  w-12 "
                       alt=""
                     />
                     <div className="flex justify-center items-center font-optimus pl-7">
